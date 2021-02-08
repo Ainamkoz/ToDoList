@@ -4,23 +4,34 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Your TO DO List </title>
+    <link rel='stylesheet' href='style.css'>
 </head>
 <body>
 
-    <div id="myDIV" class="header">
+    <div class="container"> 
         <h2>My To Do List</h2>
-        <input type="text" id="myInput" placeholder="Add new item">
-        <span onclick="newElement()" class="addBtn">Add</span>
-      </div>
-      <ul id="myUL">
-        <li></li>
-        <li class="checked"></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+        <input id="new-task" type="text" placeholder="Add new item">
+        <button>Add</button>
 <hr>
+     <h3> To Do </h3>
+     <ul id="incomplete-tasks">
+        <li>
+            <input type="checkbox">
+            <label></label>
+            <input type="text">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+        </li>
+        <li class="editMode">
+            <input type="checkbox">
+            <input type="text" value="">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+        </li>
+
+        <br>
+        <br>
+        <hr>
       <h3>Already Completed</h3>
       <ul id="completed-tasks">
         <li><input type="checkbox" checked>
@@ -30,7 +41,7 @@
             <button class="delete">Delete</button>
         </li>
       </ul>
-    </div>
+</div>
 
 </body>
 </html>
