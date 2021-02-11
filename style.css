@@ -1,10 +1,18 @@
+body{
+  background-image: url("images\notebook background.jpg");
+  background-size: cover
+}
 
 
 .container {
-  display: block;
-  width: 400px;
-  margin: 100px auto 0;
+  margin: 100px auto 0;  
+
 }
+
+.row {
+  justify-content: center;
+}
+
 ul {
   margin: 0;
   padding: 0;
