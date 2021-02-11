@@ -1,6 +1,10 @@
 body{
-  background-image: url("images\notebook background.jpg");
+
+  background-image: url("img/notebook_background.jpg");
   background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: center;
+
 }
 
 
