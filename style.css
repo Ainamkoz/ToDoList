@@ -1,93 +1,82 @@
-body{
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+}
 
+
+body{
   background-image: url("img/notebook_background.jpg");
   background-size: cover;
   background-repeat: no-repeat; 
-  background-position: center top;
-
+  background-position: center ;
+  min-height: 100vh; 
 }
 
-
-.container {
-  margin: 100px auto 0;  
-
+header {
+  font-size: 1.5rem; 
 }
 
-.row {
+header, 
+form {
+  display: flex; 
   justify-content: center;
+  align-items: center;
+  min-height: 20vh;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-li * {
-  float: left;
-}
-
-li, h3 {
-    clear:both;
-    list-style:none;
-  }
-
-  input, button {
-    outline: none;
-  }
-  button {
-    background: none;
-    border: 0px;
-    color: #888;
-    font-size: 15px;
-    width: 60px;
-    margin: 10px 0 0;
-    font-family: Lato, sans-serif;
-    cursor: pointer;
-  }
-
-  
-svg {
-  width: 64px;
-  height: 64px;
+form input, 
+form button { 
+   padding: 0.2rem; 
+   font-size: 2rem; 
+   border: none; 
+   background-color: #fff;
 }
 
-#incomplete-tasks {
+form button{ 
+  color:#593C1F; 
+  cursor: pointer; 
+  transition: all 0.3s ease;
+}
+
+form button:hover{ 
+  background: #fff; 
+  color: #000;
+}
+#incomplete {
   list-style: none;
-  margin-bottom: 20px;
+  min-width: 30%;
 }
 
-.toDo-item {
-  margin-bottom: 10px;
-  width: 100%;
-  display: flex;
-  align-items: center;
+.toDo {
+  margin: 0.5rem; 
+  color: #593C1F;
+  font-size: 1.5rem;
   justify-content: space-between;
+  display: flex;
+  align-items: center; 
 }
 
-.toDo-item span {
-  flex-grow: 1;
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: 22px;
-}
-
-input[type="checkbox"] {
-  display: none;
-}
-
-.tick {
-  width: 30px;
-  height: 30px;
-  border: 3px solid #333;
-  border-radius: 50%;
-  display: inline-flex;
+.done-container, 
+.todo-container {
+  display: flex; 
   justify-content: center;
-  align-items: center;
-  cursor: pointer;
+  align-items: center; 
 }
 
-.fal {
-  border: none;
-  outline: none;
-  cursor: pointer;
+.toDo li {
+  flex: 1; 
 }
 
+.done-button, .delete-button {
+  background: #593C1F;
+  color: white;
+  font-size: 1rem; 
+  border: none; 
+  padding: 0.8rem; 
+  cursor: pointer; 
+}
+
+.delete-button {
+  background: chocolate;
+}

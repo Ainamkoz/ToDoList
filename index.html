@@ -4,14 +4,11 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Your TO DO List </title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel='stylesheet' href='style.css'>
-    <script src="https://kit.fontawesome.com/1f0464c230.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <h2>To Do List</h2>
 <!-- 
           <form class="form-inline my-2 my-lg-0">
@@ -22,31 +19,22 @@
           </nav>
  */  -->     
     </header>
-    
-    <main>
-    <div class="container" id="above"> 
-        <div class="row">
-            <div class="col-12">
-                <form>
-                <input id="newToDo" type="text"  style="width: 200px;" placeholder="Add new item">
-                <button id="add"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                      d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
-                    ></path>
-                  </svg>
-                </button>
-                </form>
-            </div> 
-        </div>
+        <form>
+        <input id="toDoInput" type="text" placeholder="Add new item">
+            <button id="add" type="submit">
+                    <i class="fas fa-plus-square"> </i>
+            </button>
+        </form>
+    <div class="todo-container">
+        <ul id="incomplete"> 
 
-        <h3> To Do </h3> 
-             <ul id="incomplete-tasks"> </ul>
+        </ul>
+    </div>
        
-        <h3>Already Completed</h3>
-            <ul id="completed-tasks"></ul>
+    <div class="done-container">
+        <ul id="completed"></ul>
     </div>
 
-</main>
 <script src="file.js"> </script> 
 </body>
 </html>

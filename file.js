@@ -1,58 +1,40 @@
-const userInput = document.getElementById("newToDo");
-const deleteButton = document.getElementById("delete");
-const form = document.querySelector("form");
-const listSelection = document.querySelector("#incomplete-tasks")
-const deleteIcon =  ["fa-trash"]; 
+
+const toDoInput = document.querySelector('#toDoInput');
+const buttonAdd = document.querySelector("#add");
+const incomplete = document.querySelector('#incomplete'); 
 
 
-class ToDo {
-    constructor () {
-    this.inputTask = input  
-    }
-} 
 
-// to create a list of ToDO items
+// Event Listener
 
-const toDoItems = [];
+buttonAdd.addEventListener("click", addToDo); 
 
+function addToDo(event) {
+    event.preventDefault(); 
+// Create a div for toDo items 
+    const incompleteList = document.createElement('div');
+    incompleteList.classList.add('toDo'); 
 
-function renderToDoItem(toDo) {
-    const isIncomplete = toDo.Incomplete ? 'completed' : '';
-    const node = document.createElement("li");
-    node.setAttribute('class', `toDo-item ${isIncomplete}`)
-    node.setAttribute('data-key', toDo.id);
-    node.innerHTML = `
-      <input id="${toDo.id}" type="checkbox" type="text"/>
-      <label for="${toDo.id}" class="tick js-tick"></label>
-      <span>${toDo.text}</span>
-      <button class="delete-todo js-delete-todo">
-      <use> <i class="fal fa-trash-alt"></i> </use>
-      </button>
-    `;
+    const newToDo = document.createElement('li'); 
+    newToDo.innerText = toDoInput.value;
+    newToDo.classList.add('toDoItem'); 
+    incompleteList.appendChild(newToDo); 
 
-    listSelection.append(node);
+    // Create Done Button 
+    const doneButton = document.createElement('button'); 
+    doneButton.innerHTML = '<i class="fas fa-check"></i>';
+    doneButton.classList.add('done-button');
+    incompleteList.appendChild(doneButton);
 
+    // Create Delete Button 
+    const deleteButton = document.createElement('button'); 
+    deleteButton.innerHTML = '<i class="fas fa-trash"> </i>'
+    deleteButton.classList.add('delete-button')
+    incompleteList.appendChild(deleteButton)
+    incomplete.appendChild(incompleteList);
 }
 
 
-function addToDoItem(text) {
-    const toDo = {
-        text, 
-        checked: false, 
-        id: Date.now(),
-    }; 
-    toDoItems.push(toDo); 
-    renderToDoItem(toDo);
-    }
 
-   form.addEventListener("submit", event => {
-       event.preventDefault(); 
-       const text = userInput.value.trim();
-       if (text !== '') {
-           addToDoItem(text);
-           userInput.value = '';
-           userInput.focus(); 
-       }
-   });
-
+// to create a list of ToDO items
 
