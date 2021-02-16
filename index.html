@@ -7,12 +7,12 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel='stylesheet' href='style.css'>
+    <script src="https://kit.fontawesome.com/1f0464c230.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <h2>To Do List</h2>
-
 <!-- 
           <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -26,49 +26,29 @@
     <main>
     <div class="container" id="above"> 
         <div class="row">
-            <div class="col-8">
-                
-                <input id="new-task" type="text"  style="width: 200px;" placeholder="Add new item">
-            </div>
-            <div class="col-2">                
-                <button>Add</button>
-            </div>
+            <div class="col-12">
+                <form>
+                <input id="newToDo" type="text"  style="width: 200px;" placeholder="Add new item">
+                <button id="add"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path
+                      d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+                    ></path>
+                  </svg>
+                </button>
+                </form>
+            </div> 
         </div>
-<hr>        
-            <h3> To Do </h3> 
-     <ul id="incomplete-tasks">
-        <li>
-            <input type="checkbox">
-            <label></label>
-            <input type="text">
-            <button class="edit">Edit</button>
-            <button class="delete">Delete</button>
-        </li>
-        <li class="editMode">
-            <input type="checkbox">
-            <input type="text" value="">
-            <button class="edit">Edit</button>
-            <button class="delete">Delete</button>
-        </li>
 
-        <br>
-        <br>
-     
-    </div>      
-<hr>
-    <div class="container">
-      <h3>Already Completed</h3>
-      <ul id="completed-tasks">
-        <li><input type="checkbox" checked>
-            <label></label>
-            <input type="text">
-            <button class="edit">Edit</button>
-            <button class="delete">Delete</button>
-        </li>
-      </ul>
+        <h3> To Do </h3> 
+             <ul id="incomplete-tasks"> </ul>
+       
+        <h3>Already Completed</h3>
+            <ul id="completed-tasks"></ul>
     </div>
 
-
 </main>
+<script src="file.js"> </script> 
 </body>
 </html>
+
+

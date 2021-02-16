@@ -43,3 +43,51 @@ li, h3 {
     font-family: Lato, sans-serif;
     cursor: pointer;
   }
+
+  
+svg {
+  width: 64px;
+  height: 64px;
+}
+
+#incomplete-tasks {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.toDo-item {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toDo-item span {
+  flex-grow: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.tick {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #333;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fal {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
