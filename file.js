@@ -4,7 +4,6 @@ const buttonAdd = document.querySelector("#add");
 const incomplete = document.querySelector('#incomplete'); 
 
 
-
 // Event Listener
 
 buttonAdd.addEventListener("click", addToDo); 
@@ -34,7 +33,4 @@ function addToDo(event) {
     incomplete.appendChild(incompleteList);
 }
 
-
-
-// to create a list of ToDO items
 
