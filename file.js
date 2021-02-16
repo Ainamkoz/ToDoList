@@ -47,10 +47,7 @@ function deleteDoneButton(e) {
         const toDo = item.parentElement; 
         toDo.remove();
     }
-    if(item.classList[0] === 'done-button') {
-        const toDo = item.parentElement; 
-        toDo.classList.toggle("done");
-    }
+   
 }
 
 
