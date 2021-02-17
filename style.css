@@ -5,28 +5,73 @@
 }
 
 
-body{
+body {
   background-image: url("img/notebook_background.jpg");
   background-size: cover;
   background-repeat: no-repeat; 
   background-position: center ;
-  min-height: 100vh; 
+  min-height: 150vh; 
   font-family: 'Courgette', cursive;
   font-weight: 617;
 }
 
-header {
-  font-size: 1.5rem; 
-  font-family: 'Courgette', cursive;
+.searchBar {
+  position: absolute;
+  right: 50px; 
+  top: -10px;
+}
+
+.searchBar[placeholder] {
+  font-size: 15px;
+}
+
+.searchBar input, .searchButton {
+  width: 200px; 
+  background-color: #5f402017;
+  padding: auto; 
+  border-radius: 5px;
+}
+
+.searchButton {
+  width: 40px;
+  height: 46px; 
+}
+
+.searchButton:hover {
+  color: white; 
+  background: none;
+}
+
+#date {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  font-size: 1.8rem; 
 
 }
 
-header, 
+header {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.8rem; 
+  font-family: 'Courgette', cursive;
+  margin-top: 100px; 
+  min-height: 10vh;
+}
+
+header form {
+  margin-bottom: 0px;
+}
+
+
+ 
 form {
   display: flex; 
   justify-content: center;
   align-items: center;
-  min-height: 20vh;
+  min-height: 30vh;
 }
 
 form input, 
@@ -47,7 +92,7 @@ form button:hover{
   background: #fff; 
   color: chocolate;
 }
-#incomplete {
+#incomplete, #completed {
   list-style: none;
   min-width: 30%;
   background: #ffffff6e;
@@ -68,12 +113,13 @@ form button:hover{
   justify-content: center;
   align-items: center; 
   flex-direction: column;
-  
+  min-height: 20vh;  
+  max-height: 100vh;
 }
 
 .done-container h2, 
 .todo-container h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 
 }
 
@@ -103,5 +149,4 @@ form button:hover{
 
 input[placeholder] {
   font-family: 'Courgette', cursive;
-
 }
