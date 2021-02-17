@@ -1,4 +1,3 @@
-
 const toDoInput = document.querySelector('#toDoInput');
 const buttonAdd = document.querySelector("#add");
 const incomplete = document.querySelector('#incomplete'); 
@@ -70,13 +69,11 @@ function deleteButton(e) {
     }
 };
 
-// Completed list
 
 
 
 
 const dateContainer = document.querySelector('#date');
-
 const currentDate = new Date();
 const currentMonth = currentDate.getMonth() + 1;
 const currentDay = currentDate.getDate();
@@ -84,5 +81,3 @@ const currentYear = currentDate.getFullYear();
 
 dateContainer.innerHTML = `${currentDay}/${currentMonth}/${currentYear}`
 console.log(currentDay, currentMonth, currentYear)
-
-
