@@ -9,7 +9,7 @@ body{
   background-image: url("img/notebook_background.jpg");
   background-size: cover;
   background-repeat: no-repeat; 
-  background-position: center ;
+  background-position: center top;
   min-height: 100vh; 
   font-family: 'Courgette', cursive;
   font-weight: 617;
