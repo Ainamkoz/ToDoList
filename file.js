@@ -1,8 +1,10 @@
 const userInput = document.getElementById("newToDo");
 const deleteButton = document.getElementById("delete");
 const form = document.querySelector("form");
-const incompleteTast = document.querySelector("#incomplete-tasks")
-const deleteIcon =  ["fa-trash"]; 
+const incompleteTask = document.querySelector("#incomplete-tasks")
+
+
+const deleteIcon =  ["fa-trash"];  //does it have to be a variable?
 
 
 class ToDo {
@@ -15,6 +17,12 @@ class ToDo {
 
 const toDoItems = [];
 
+deleteButton.className = 'btn btn-danger btn-sm float-right delete';
+
+
+
+
+/*
 function renderToDoItem(toDo) {
     const isIncomplete = toDo.Incomplete ? 'completed' : '';
     const task = document.createElement("li");
@@ -24,8 +32,7 @@ function renderToDoItem(toDo) {
       <input id="${toDo.id}" type="checkbox" type="text"/>
       <label for="${toDo.id}" class="tick js-tick"></label>
       <span>${toDo.text}</span>
-      <button class="delete-todo js-delete-todo">
-      <use> <i class="fal fa-trash-alt"></i> </use>
+      <button class="btn btn-danger btn-sm float-right delete">
       </button>
     `;
 
@@ -57,5 +64,5 @@ form.addEventListener("submit", event => {
  //  ?     userInput.focus(); 
        }
    });
-
+*/
 
