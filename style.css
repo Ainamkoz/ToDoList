@@ -11,15 +11,16 @@ body {
   background-size: cover;
   background-repeat: no-repeat; 
   background-position: center ;
-  min-height: 150vh; 
+  min-height: 100vh; 
   font-family: 'Courgette', cursive;
   font-weight: 617;
+  margin-bottom: 80px;
 }
 
 .searchBar {
   position: absolute;
   right: 50px; 
-  top: -10px;
+  top: -60px !important; 
 }
 
 .searchBar[placeholder] {
@@ -62,15 +63,9 @@ header {
   min-height: 10vh;
 }
 
-header form {
-  margin-bottom: 0px;
+#toDoInput  {
+  margin-bottom: -100x;
 }
-#search {
-
-}
-
-
- 
 form {
   display: flex; 
   justify-content: center;
@@ -118,7 +113,7 @@ form button:hover{
   align-items: center; 
   flex-direction: column;
   min-height: 20vh;  
-  max-height: 100vh;
+
 }
 
 .done-container h2, 
