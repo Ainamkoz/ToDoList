@@ -45,7 +45,17 @@ function addToDo(event) {
         li.remove();
         completed.appendChild(li);
         doneButton.style.display = 'none';
-    });
+    }); 
+
+    deleteButton.addEventListener("click", function() {
+        const li = this.parentNode;
+        li.remove(); 
+    })
+    
+
+    
+
+
 
 }  
 
