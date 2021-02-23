@@ -12,9 +12,9 @@ incomplete.addEventListener("click", deleteButton);
 
 function addToDo(event) {
     event.preventDefault(); 
-    if (userInput.value === "") {
+    if (toDoInput.value === "") {
         alert("Nothing to do");
-      } else {
+      } else { 
 
 // Create a div for toDo items 
     const incompleteList = document.createElement('div');
