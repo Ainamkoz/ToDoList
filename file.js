@@ -12,6 +12,9 @@ incomplete.addEventListener("click", deleteButton);
 
 function addToDo(event) {
     event.preventDefault(); 
+    if (userInput.value === "") {
+        alert("Nothing to do");
+      } else {
 
 // Create a div for toDo items 
     const incompleteList = document.createElement('div');
@@ -51,14 +54,7 @@ function addToDo(event) {
         li.remove(); 
     })
     
-
-    
-
-
-
-}  
-
-
+}};
 
 // Delete Function
 function deleteButton(e) {
@@ -70,14 +66,13 @@ function deleteButton(e) {
 };
 
 
-
-
-
 const dateContainer = document.querySelector('#date');
 const currentDate = new Date();
 const currentMonth = currentDate.getMonth() + 1;
 const currentDay = currentDate.getDate();
 const currentYear = currentDate.getFullYear();
 
-dateContainer.innerHTML = `${currentDay}/${currentMonth}/${currentYear}`
+dateContainer.innerHTML = `${currentDay}.${currentMonth}.${currentYear}`
 console.log(currentDay, currentMonth, currentYear)
+
+
